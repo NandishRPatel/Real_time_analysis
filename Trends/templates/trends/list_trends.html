@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trends Result</title>
+    <style>
+        fieldset{
+                width:500px;
+                border-style: solid;
+                border-width:5px;
+                border-color:#0084b4;
+            }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <fieldset>
+            <legend style="color:#3A3A3A;">
+                <h1>Trending Hashtags</h1>
+            </legend>
+            <ul>
+                {% for hashtag in trends %}
+                <li>{{ hashtag }}</li>
+                {% endfor %}
+            </ul>
+
+        </fieldset>
+    </div>
+</body>
+</html>
