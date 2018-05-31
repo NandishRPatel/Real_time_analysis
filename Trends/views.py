@@ -18,6 +18,8 @@ def trends(request):
     trends_list = trends_list[0]['trends']
     list=[]
     for i in trends_list:
+        temp = i['name']
+        if (temp[0] == '#'):i['name'] = i['name'][1:]
         list.append(i['name'])
     template = loader.get_template('list_trends.html')
     return HttpResponse(template.render({'trends':list}, request))

@@ -17,5 +17,5 @@ from django.conf.urls import url,include
 import Trends.urls
 
 urlpatterns = [
-    url(r'', include(Trends.urls)),
+    url(r'^$', include(Trends.urls)),
 ]
